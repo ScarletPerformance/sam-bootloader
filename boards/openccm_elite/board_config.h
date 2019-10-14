@@ -4,7 +4,7 @@
 #define VENDOR_NAME "Scarlet Performance"
 #define PRODUCT_NAME "OpenCCM Elite"
 #define VOLUME_LABEL "CCM4BOOT"
-#define INDEX_URL "http://adafru.it/4064"
+#define INDEX_URL "https://www.scarletperformance.com/"
 #define BOARD_ID "SAME51N20A-OpenCCM-Elite"
 
 #define USB_VID 0xF055 //Using USB-IF's "USB-IF" vendor ID until we get ours.
