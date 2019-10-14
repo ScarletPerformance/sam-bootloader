@@ -1,10 +1,10 @@
 # UF2 Bootloader
 
-This repository contains a bootloader, derived from Atmel's SAM-BA,
-which in addition to the USB CDC (serial) protocol, also supports
-the USB MSC (mass storage).
+This archive contains information about the binaries of the bootloader built from this repository for Microchip SAME based Scarlet Performance products.  This repository contains a bootloader, derived from Atmel's SAM-BA, which in addition to the USB CDC (serial) protocol, also supports the USB MSC (mass storage).
 
-[![Build Status](https://travis-ci.org/Microsoft/uf2-samd21.svg?branch=master)](https://travis-ci.org/Microsoft/uf2-samd21)
+This project is a fork specific to our products.  Please visit [the source project](https://github.com/adafruit/uf2-samdx1) or [Microsoft's original project](https://github.com/microsoft/uf2-samdx1) for widely compatible code.
+
+[![Build Status](https://travis-ci.org/Microsoft/uf2-samdx1.svg?branch=master)](https://travis-ci.org/Microsoft/uf2-samdx1)
 
 ## UF2
 
@@ -180,11 +180,7 @@ Three typical configurations are:
   logging disabled; no handover; no HID;
   only this one if you need the UART support in bootloader for whatever reason
 
-CDC and MSC together will work on Linux and Mac with no drivers.
-On Windows, if you have drivers installed for the USB ID chosen,
-then CDC might work and MSC will not work;
-otherwise, if you have no drivers, MSC will work, and CDC will work on Windows 10 only.
-Thus, it's best to set the USB ID to one for which there are no drivers.
+CDC and MSC together will work on Linux and Mac with no drivers.  On Windows, if you have drivers installed for the USB ID chosen, then CDC might work and MSC will not work; otherwise, if you have no drivers, MSC will work, and CDC will work on Windows 10 only.  Thus, it's best to set the USB ID to one for which there are no drivers.
 
 The bootloader sits at 0x00000000, and the application starts at 0x00002000 (SAMD21) or 0x00004000 (SAMD51).
 
