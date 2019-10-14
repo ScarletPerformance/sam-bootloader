@@ -59,7 +59,11 @@ ifeq ($(CHIP_FAMILY), samd51)
 ifeq ($(findstring SAME54,$(CHIP_VARIANT)),SAME54)
 INCLUDES += -Ilib/same54/include/
 else
+ifeq ($(findstring SAME51,$(CHIP_VARIANT)),SAME51)
+INCLUDES += -Ilib/same51/include/
+else
 INCLUDES += -Ilib/samd51/include/
+endif
 endif
 endif
 
